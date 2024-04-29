@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Stop the screen from turning off when idle.
+DISABLE_POWER_MANAGEMENT=yes
+# Set Resolution of GUI to 1280x720 
+xrandr --output HDMI-2 --mode 1280x720
+# Rotate screen if needed, see 'xrandr -h' for options.
+DISPLAY_ORIENTATION=normal
+
+if ["${DISPLAY_ORIENTATION}" != 'normal'];
+then
+  xrandr --orientation ${DISPLAY_ORIENTATION}
+fi
+
+if ["${DISABLE_POWER_MANAGEMENT}" == 'yes'];
+then
+  xset s off         # don't activate screensaver
+  xset -dpms         # disable DPMS (Energy Star) features.
+  xset s noblank     # don't blank the video device
+fi
+
+compton -b -d :0 --backend glx --unredir-if-possible --glx-swap-method buffer-age --glx-no-stencil --paint-on-overlay --vsync opengl
+matchbox-window-manager &
+
+/home/pi/scripts/run_onepageos
