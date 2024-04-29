@@ -12,3 +12,7 @@ cd $HOME
 git clone https://github.com/Linkek/keyboardTriggerServer.git
 cd keyboardTriggerServer
 npm install
+cd ..
+sudo mv keyboardTriggerServer.service /etc/systemd/system/
+sudo systemctl start keyboardTriggerServer
+sudo systemctl enable keyboardTriggerServer
