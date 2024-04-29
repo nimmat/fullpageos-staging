@@ -1,7 +1,7 @@
 #!/bin/bash
 sudo rm /boot/fullpageos.txt && sudo mv fullpageos.txt /boot
-xrandr --addmode HDMI-2 1280x720
-xrandr --output HDMI-2 --mode 1280x720
+DISPLAY=:0 xrandr --addmode HDMI-2 1280x720
+DISPLAY=:0 xrandr --output HDMI-2 --mode 1280x720
 sudo rm ../scripts/start_gui
 sudo mv start_gui ../scripts/
 sudo chmod +x ../scripts/start_gui
