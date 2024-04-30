@@ -16,3 +16,6 @@ cd $HOME/fullpageos-staging
 sudo mv keyboardTriggerServer.service /etc/systemd/system/
 sudo systemctl start keyboardTriggerServer
 sudo systemctl enable keyboardTriggerServer
+mkdir ~/.matchbox
+sudo cp /usr/share/matchbox-keyboard/keyboard-lq1.xml ~/.matchbox/keyboard.xml
+sudo chown pi:pi ~/.matchbox/keyboard.xml
