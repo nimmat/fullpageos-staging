@@ -25,6 +25,17 @@ sudo systemctl enable keyboardTriggerServer
 mkdir ~/.matchbox
 sudo cp /usr/share/matchbox-keyboard/keyboard-lq1.xml ~/.matchbox/keyboard.xml
 sudo chown pi:pi ~/.matchbox/keyboard.xml
-echo "***************************************" > /dev/null
-echo "*                                     *" > /dev/null
-echo "* please complete the following steps *" > /dev/null
+echo "************************************************" 
+echo "*                                              *" 
+echo "*    please complete the following steps:      *" 
+echo "*                                              *" 
+echo "*    Run raspi-config - set screen blanking    *" 
+echo "*    to no. System will reboot on finish       *" 
+echo "*                                              *" 
+echo "*    Use VNC to add Keyboard Extension to      *" 
+echo "*    Chrome by pressing Alt + T in Developer   *" 
+echo "*    mode                                      *" 
+echo "*                                              *" 
+echo "*    Ideally change VNC Access Password        *" 
+echo "*                                              *" 
+echo "************************************************" 
