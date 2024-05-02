@@ -11,6 +11,9 @@ sudo chmod +x ../scripts/start_gui
 sudo chmod +x ../scripts/start_chromium_browser
 sudo chown root:root ../scripts/start_gui
 sudo chown root:root ../scripts/start_chromium_browser
+sudo rm /etc/X11/xorg.conf.d/10-blanking.conf
+sudo cp 10-blanking.conf /etc/X11/xorg.conf.d/
+sudo chown root:root /etc/X11/xorg.conf.d/10-blanking.conf
 sudo apt-get update
 sudo apt-get upgrade -y
 sudo apt install matchbox-keyboard nodejs npm unclutter -y
