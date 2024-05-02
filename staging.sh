@@ -8,6 +8,8 @@ sudo mv start_gui ../scripts/
 sudo mv start_chromium_browser ../scripts/
 sudo chmod +x ../scripts/start_gui
 sudo chmod +x ../scripts/start_chromium_browser
+sudo chown root:root ../scripts/start_gui
+sudo chown root:root ../scripts/start_chromium_browser
 sudo apt-get update
 sudo apt-get upgrade -y
 sudo apt install matchbox-keyboard nodejs npm unclutter -y
