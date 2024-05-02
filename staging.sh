@@ -25,3 +25,6 @@ sudo systemctl enable keyboardTriggerServer
 mkdir ~/.matchbox
 sudo cp /usr/share/matchbox-keyboard/keyboard-lq1.xml ~/.matchbox/keyboard.xml
 sudo chown pi:pi ~/.matchbox/keyboard.xml
+echo "***************************************" > /dev/null
+echo "*                                     *" > /dev/null
+echo "* please complete the following steps *" > /dev/null
