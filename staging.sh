@@ -3,8 +3,11 @@ sudo rm /boot/firmware/fullpageos.txt && sudo mv fullpageos.txt /boot/firmware
 DISPLAY=:0 xrandr --addmode HDMI-2 1280x720
 DISPLAY=:0 xrandr --output HDMI-2 --mode 1280x720
 sudo rm ../scripts/start_gui
+sudo rm ../scripts/start_chromium_browser
 sudo mv start_gui ../scripts/
+sudo mv start_chromium_browser ../scripts/
 sudo chmod +x ../scripts/start_gui
+sudo chmod +x ../scripts/start_chromium_browser
 sudo apt-get update
 sudo apt-get upgrade -y
 sudo apt install matchbox-keyboard nodejs npm unclutter -y
